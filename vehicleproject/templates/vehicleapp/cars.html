@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<center><h1>CARS TABLE</h1></center>
+{% if cars_list %}
+<center><table border="5">
+    <thead>
+    <th>Car Company</th>
+    <th>Car Color</th>
+    <th>Fuel Type</th>
+    <th>Milage</th>
+    </thead>
+    {% for i in cars_list %}
+    <tr>
+        <td>{{i.car_company}}</td>
+        <td>{{i.car_color}}</td>
+        <td>{{i.car_fuel_type}}</td>
+        <td>{{i.car_milage}}</td>
+    </tr>
+    {% endfor %}
+</table></center>
+{% else %}
+<p>NO RECORDS FOUND</p>
+{% endif %}
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<center><font color="white"><h1>BIKES TABLE</h1></font></center>
+{% if bikes_list %}
+<center><font color="black"><table border="5" color=" solid black">
+    <thead>
+    <th>Bike Company</th>
+    <th>Bike Color</th>
+    <th>Fuel Type</th>
+    <th>Milage</th>
+    </thead>
+    {% for i in bikes_list %}
+    <tr>
+        <td>{{i.bike_company}}</td>
+        <td>{{i.bike_color}}</td>
+        <td>{{i.bike_fuel_type}}</td>
+        <td>{{i.bike_milage}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>NO RECORDS FOUND</p>
+{% endif %}
+
+</body></font>
+    </center>
+</html>
